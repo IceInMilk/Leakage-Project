@@ -1,0 +1,10 @@
+MLKEM_DIR = $(FIRMWAREPATH)/crypto/clean-mlkem512
+VPATH += :$(MLKEM_DIR)
+EXTRAINCDIRS += $(MLKEM_DIR)
+
+SRC += mlkem-independant.c
+
+SRC += cbd.c indcpa.c kem.c ntt.c poly.c polyvec.c reduce.c symmetric-shake.c verify.c fips202.c
+
+CDEFS += -DCLEAN_MLKEM512=1
+
